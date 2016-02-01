@@ -1,16 +1,120 @@
+/* Tonic Skin */
+
+
+html {
+  /* background: var(bg); */
+}
+
+body {
+  background-image: url("img/subtle.png");
+  color: #333;
+}
+
+
+
+a {
+  text-decoration:none;
+  /* color: var(fg); */
+}
+
+/* .button, button {
+  background:var(button-bg);
+  color:var(button-fg);
+} */
+
+/* .button:hover, .button:focus, button:hover, button:focus, button.active {
+  background:var(button-active-bg) !important;
+  color: var(button-active-fg);
+} */
+
+/* input {
+  color: var(highlight-fg);
+  background:var(highlight-bg);
+} */
+
+
+
+
+
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px; }
+::-webkit-scrollbar-track { border-radius: 2px; }
+::-webkit-scrollbar-thumb { border-radius: 2px; }
+::-webkit-scrollbar-corner { background:transparent; }
+
+::-webkit-input-placeholder {
+    /* color: var(placeholder-fg); */
+  }
+::-webkit-scrollbar {background: transparent;}
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: #ededed;
+  border:1px solid #ededed;
+  var-scrollbar: #ededed;
+  var-placeholder-fg: #aaa;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+  border:1px solid #999;
+}
+
+::-webkit-scrollbar-corner { background:transparent; }
+::selection {
+  background: #aaa;
+}
+
+
+
+
+/* Editor - Inline Results ****************************************/
+
+.inline-result {
+  background: #b4d5fe;
+  color: #333;
+  border: solid 1px #b4d5fe;
+  border-radius: 2px;
+  font-size: 0.80em;
+}
+
+.inline-exception pre {
+  font-size: 0.6em;
+  color: #a94442;
+  background-color: #f2dede;
+  border: solid 1px #ebccd1;
+  border-radius: 2px;
+  line-height: 1.1;
+  margin-bottom:20px;
+}
+
+
+
+
+.result-mark {
+  overflow-x: scroll !important; /* allow scroll to see full results */
+}
+
+
+
+
+
+
+
+
+
+
 /**********************************************************
 * Vars
 ***********************************************************/
 
 :root .skin-tonic {
-  
-  var-bg: #f1f1f6;
 
+  var-bg: #f1f1f6;
   /* 616161 */
-  var-fg: #535353; 
+  var-fg: #535353;
 
   var-topoffset: 40px;
-
 
   var-multi: #202020;
   var-border: #444;
@@ -18,12 +122,9 @@
 
   var-scrollbar: #ededed;
   var-placeholder-fg: #aaa;
-  
+
   var-dim-fg: #bbb;
-  
   var-bright-fg: #666666;
-
-
 
   var-blinding-fg: #fff;
   var-hidden-fg: #bbb;
@@ -53,7 +154,7 @@
 
   var-error-bg: transparent;
   var-error-fg: #FFA6A6;
-  
+
   var-error-highlight-fg: #FFCDCD;
   var-error-border: #aF5D5D;
 
@@ -93,53 +194,38 @@
   var-tertiary-accent-bg: #5E3870;
 }
 
+
+
 /**********************************************************
 * Shared
 ***********************************************************/
 
-html { background: var(bg);}
-
-body {
-  background: var(bg);
-  color: var(fg);
-}
-a {text-decoration:none; color: var(fg); }
-.button, button { background:var(button-bg); color:var(button-fg); }
-.button:hover, .button:focus, button:hover, button:focus, button.active { background:var(button-active-bg) !important; color: var(button-active-fg); }
-input { color: var(highlight-fg); background:var(highlight-bg); }
-
-::-webkit-scrollbar { width: 7px; height: 7px; }
-::-webkit-scrollbar-track { border-radius: 2px; }
-::-webkit-scrollbar-thumb { border-radius: 2px; }
-::-webkit-scrollbar-corner { background:transparent; }
-
-::-webkit-input-placeholder { color: var(placeholder-fg); }
-::-webkit-scrollbar {background: transparent;}
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: var(scrollbar); border:1px solid var(scrollbar); }
-::-webkit-scrollbar-thumb:hover { background: var(medium-highlight-bg); border:1px solid var(medium-highlight-bg); }
-::-webkit-scrollbar-corner { background:transparent; }
-::selection { background: var(placeholder-fg); }
-
-
-/* inline repl results? */ 
-.inline-result {
-  background: var(dark-accent-background);
-  color:var(accent-foreground);
-  border: solid 1px var(dark-accent-background);
-  border-radius: 2px; }
 
 
 
 
-.inline-exception pre { background: var(error-bg); color: var(error-fg); }
+
+
+
+
+
+
+
+
+
+
+
+
 
 .underline-result pre { background: transparent; color: var(accent-foreground)}
 
 .inline-doc {
-  background:var(dark-accent-background);
-  border: solid 1px var(dark-accent-background);
+  /* background:var(dark-accent-background);
+  border: solid 1px var(dark-accent-background); */
   border-radius: 2px;
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border: dotted 2px #faebcc;
 }
 
 .inline-doc h1 {color:var(light-accent-foreground);}
@@ -160,8 +246,8 @@ input { color: var(highlight-fg); background:var(highlight-bg); }
 
 #multi .list { background:transparent; }
 #multi .list li { box-sizing:border-box; height:30px;}
-#multi .list .active, #multi .list li:hover { 
-    background:var(multi); 
+#multi .list .active, #multi .list li:hover {
+    background:var(multi);
     color:var(highlight-fg);
     }
 #multi .list .dirty { color:var(accent-foreground); }
@@ -192,14 +278,14 @@ input { color: var(highlight-fg); background:var(highlight-bg); }
 #instarepl .result-result { background:var(result-bg); color:var(result-fg); }
 #instarepl .exception-result { background:var(error-bg); color:var(error-fg); }
 
-.popup { background:var(overlay-dimmer); }
-.popup > div > div { background:var(accent-background); color:var(accent-foreground); }
-.popup .button { background: transparent; border:2px solid var(accent-foreground); color:var(accent-foreground); }
+.popup { background: rgba(0,0,0,0.5); }
+.popup > div > div { background: #ddd; color: #333; }
+.popup .button { background: transparent; border:2px solid #333; color:#333; }
 .popup label { margin-right:10px; display:block; }
-.popup input { background: transparent; padding:8px 10px; border:2px solid var(accent-foreground); color:var(accent-foreground); width:60%; }
-.popup input::-webkit-input-placeholder { color:var(accent-foreground); }
-.popup .button:hover, .popup .button.active { background:var(accent-foreground) !important; color:var(accent-background); }
-.popup ::-webkit-scrollbar-thumb { background: var(accent-foreground); border:1px solid var(accent-foreground); }
+.popup input { background: transparent; padding:8px 10px; border:2px solid #333; color:#333; width:60%; }
+.popup input::-webkit-input-placeholder { color:#333; }
+.popup .button:hover, .popup .button.active { background:#333 !important; color:#ddd; }
+.popup ::-webkit-scrollbar-thumb { background: #333; border:1px solid #333; }
 
 #version-info {background:var(multi);}
 #version-info .info { border-right:1px solid var(bg); }
@@ -210,31 +296,40 @@ input { color: var(highlight-fg); background:var(highlight-bg); }
 .filter-list { color: var(fg); }
 
 /* todo attach to a variable */
-.filter-list em { color:green; } 
+.filter-list em { color:green; }
 
 
 .filter-list .selected, .filter-list li:hover { color:var(highlight-fg); background: var(highlight-bg);}
 .filter-list .selected em, .filter-list li:hover em { color:var(accent-foreground); }
 
-#side .content { /*background:var(bg); box-shadow: 0 0 0px var(shadow); */
-
+#side .content {
+  color: #777;
 }
 #side ::-webkit-scrollbar-thumb { background: var(scrollbar); border:1px solid var(scrollbar); }
 
 #side .workspace ul.buttons li:hover:not(.sep) { color:var(highlight-fg); background:var(highlight-bg); }
 
-#side .workspace li:hover > div > p { 
+#side .workspace li:hover > div > p {
 /* color: var(highlight-fg); */ }
 
-#side .workspace li p:hover { background: var(highlight-bg); /* color:var(highlight-fg); */ }
+#side .workspace li p:hover {
+  background-color: #efefef;
+  border-right: solid 3px #ccc;
+}
 
 #side .workspace .recent > div > ul > li + li { border-top:0px solid var(pane-border); }
 #side .workspace .recent > div > ul > li:hover { border-color: var(pane-border); background:var(highlight-bg); color: var(highlight-fg); }
 #side .workspace .recent > div > ul > li:hover + li { border-top-color: var(pane-border); }
 #side .workspace .recent h2:hover { background: var(highlight-bg); color:var(highlight-fg); }
 
+#side .tree-root > ul > li {
+  margin-bottom: 15px;
+  border-left: solid 3px #ccc;
+}
+
+
 #right-bar .content { background:var(bg); }
-#right-bar .command h2:hover { background:var(highlight-bg); color:var(highlight-fg); }
+#right-bar .command h2:hover { background:#efefef; color:var(highlight-fg); }
 #right-bar .command input { background:var(highlight-bg); color:var(highlight-fg); }
 #right-bar .command li + li { border-top:1px solid var(dark-pane-border); }
 
@@ -244,7 +339,10 @@ input { color: var(highlight-fg); background:var(highlight-bg); }
 #right-bar .command .filter-list .selected p.binding { color: var(fg); }
 
 #right-bar .filter-list h2 { color:var(bright-fg);  }
-#right-bar .filter-list .selected, #right-bar .filter-list .selected h2, #right-bar .filter-list li:hover { color:var(highlight-fg); background: var(highlight-bg); }
+#right-bar .filter-list .selected, #right-bar .filter-list .selected h2, #right-bar .filter-list li:hover {
+  /* color:var(highlight-fg); */
+  background: #efefef;
+}
 #right-bar .filter-list input { border:0px solid var(pane-border); background:var(highlight-bg); }
 
 #right-bar .navigate .filter-list .selected p { color:var(fg); }
@@ -286,7 +384,7 @@ input { color: var(highlight-fg); background:var(highlight-bg); }
 #statusbar .log .error { color:var(error-fg); background:var(error-bg); }
 #statusbar .log .tip { color: var(accent-foreground); }
 
-#find-bar input { border-top:2px solid var(bg); background:var(multi); }
+#find-bar input { border-top:2px solid var(bg); }
 #find-bar input + input { border-left:2px solid var(bg); }
 #find-bar ::-webkit-input-placeholder { color:var(hidden-fg); }
 #find-bar button { background:var(bg); }
@@ -380,7 +478,7 @@ input { color: var(highlight-fg); background:var(highlight-bg); }
 .workspace .buttons { display:none; }
 
 
-.inline-result { }
+/* .inline-result { } */
 .inline-doc { font-size: 0.80em; padding-bottom: 10px; }
 
 
@@ -426,7 +524,7 @@ input { color: var(highlight-fg); background:var(highlight-bg); }
     border:dotted 1px #ccc;
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
-    
+
     /* overlay the tab over .content so it appears as part of the document */
     position: relative;
     z-index: 1000;
@@ -440,10 +538,10 @@ input { color: var(highlight-fg); background:var(highlight-bg); }
 
 #multi .items {}
 
-#multi .content { 
+#multi .content {
     background: var(multi);
     top:29px; left:0; right:0;
-    
+
     margin-left:10px; margin-right: 0px;
 
     padding:5px; padding-bottom:5px;
@@ -459,16 +557,18 @@ input { color: var(highlight-fg); background:var(highlight-bg); }
 
 
 
-#side { top: var(topoffset); padding-left: 0px; }
+#side { top: 30px; padding-left: 0px; }
 
-#side .content { padding: 10px;}
+#side .content { padding: 10px;
+  font-family: 'Lucida Grande';
+}
 
 #side .workspace ul.root { top:0px; left:0px;right:0px; }
 #side .workspace .folder { font-weight: normal; }
 
 
 
-#right-bar {top: var(topoffset); }
+#right-bar {top: 40px; }
 #right-bar .filter-list input { padding:6px 10px; font-size:18px; margin-top:0; border-radius:0px; }
 #right-bar .filter-list ul { top:35px; bottom:10px; }
 #right-bar .content { padding:0 15px; padding-bottom:10px;}
@@ -507,12 +607,46 @@ button { border-radius:0; }
 
 /* completion pop-ups */
 .CodeMirror-hints.empty { display:none; }
-.CodeMirror-hints { position: absolute; z-index: 1000000000000000; overflow: hidden; list-style: none;
-      margin: 0; padding: 5px; border-radius: 2px; 
-      border: 1px dotted var(pane-bg);  background: var(pane-bg);
-      font-size: 90%; font-family: inherit;  max-height: 20em; }
-.CodeMirror-hints ul { overflow-y:auto; max-height:20em; }
-.CodeMirror-hints ul li { margin: 0; padding: 0 4px; border-radius: 2px; max-width: 60em; overflow: hidden; 
+.CodeMirror-hints {
+  position: absolute; z-index: 1000000000000000; overflow: hidden; list-style: none;
+  margin: 0; padding: 5px; border-radius: 2px;
+  border: 1px dotted #ddd;
+  background: #ddd;
+  font-size: 90%; font-family: inherit;  max-height: 20em;
+}
+
+/*
+  var-pane-bg: #ddd;
+  var-pane-scrollbar: #7c7c7c;
+  var-dark-pane-bg: #1c1f26;
+  var-dark-pane-border: #606060;
+  var-pane-border: #888;
+
+ .CodeMirror-hints {
+  position: absolute;
+  z-index: 1000000000000000;
+  overflow: hidden;
+  list-style: none;
+  margin: 0;
+  padding: 2px;
+  border-radius: 2px;
+  border: 1px solid #3b3f41;
+  background: #3b3f41;
+  font-size: 90%;
+  font-family: inherit;
+  max-height: 20em;
+} */
+
+
+
+
+
+
+
+
+.CodeMirror-hints ul { overflow-y:auto; max-height:20em;
+}
+.CodeMirror-hints ul li { margin: 0; padding: 0 4px; border-radius: 2px; max-width: 60em; overflow: hidden;
   white-space: pre; color: var(bright-fg); cursor: pointer; }
 
 .CodeMirror-hints input { display:none; }
@@ -520,7 +654,6 @@ button { border-radius:0; }
 .CodeMirror-hints ul::-webkit-scrollbar-thumb { background: var(scrollbar); border-color: var(scrollbar); }
 
 
-
-
-
-
+.CodeMirror {
+  text-rendering: optimizeLegibility; /* this is to enable Fira Code Ligatures */
+}

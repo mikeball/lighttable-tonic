@@ -3,4 +3,4 @@
  :author "Michael Ball"
  :source "https://github.com/mikeball/lighttable-tonic"
  :desc "A light skin and theme for LightTable"
- :behaviors "behaviors.edn"}
+ :behaviors "tonic.behaviors"}

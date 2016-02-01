@@ -1,0 +1,2 @@
+{:+ {:app [(:lt.objs.style/provide-skin  "tonic" "tonic.skin.css")
+           (:lt.objs.style/provide-theme "tonic" "tonic.theme.css")]}}
